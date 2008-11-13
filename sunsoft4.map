@@ -8,7 +8,7 @@ DUMP_START
 #$8000 register address set
 #$a000 register data set
 #$00-$07 PPUBANK
-#$08 特定ソフトのみ CPUBANK
+#$08 特定ソフトのみ CPUBANK, $6000-$7fff ROM
 #$09-$0B CPUBANK
 #$0c mirror
 #$0d-$0f IRQ
