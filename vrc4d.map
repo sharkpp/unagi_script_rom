@@ -1,4 +1,5 @@
 #VRCIV A0,A1 reversed + A1 invert + 2M + backup
+#RC832, RC842
 #がんばれゴエモン外伝消えた黄金キセル
 MAPPER 25
 CPU_ROMSIZE 0x40000
