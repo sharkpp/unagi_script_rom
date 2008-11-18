@@ -80,6 +80,7 @@ DUMP_START
 CPU_READ [address] [length]
 CPUアドレスから指定の長さのデータを読み込みます。定数のみ。
 address 有効範囲は 0x6000-0xffff.
+length 有効範囲は 1-0x4000.
 
 CPU_WRITE [address] [ex0] [ex1] [ex2]
 CPUアドレスに ex012 を計算したデータを書き込みます。ex0 のみでも可。
@@ -94,9 +95,9 @@ CPU メモリ領域の読み込みが完了した後に使用します。
 PPU_READ [address] [length]
 PPUアドレスから指定の長さのデータを読み込みます。定数のみ。
 address 有効範囲は 0x0000-0x1fff.
-
-PPU_WRITE [address] [data]
-PPUアドレスに data を書き込みます。mmc2/4 の制御にのみ必要。
+length 有効範囲は 0-0x2000.
+length 0 時は実際にはアクセスしますが、バッファに保存されません。
+mmc2/4 の制御にのみ必要。
 
 STEP_START [name] [start] [end] [next]
 ループの開始と変数宣言を行います。ループは C でいうところの 
