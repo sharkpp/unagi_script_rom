@@ -1,5 +1,5 @@
-#nonmapper, mapper ≤Ú¿œÕ—
-#RC805 antarctic adventure
+#nonmapper
+#RC805, hvc-bf
 MAPPER 0
 CPU_ROMSIZE 0x8000
 PPU_ROMSIZE 0x2000
