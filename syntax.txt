@@ -63,9 +63,9 @@ MIRROR [HVA]
 CPU_ROMSIZE [bytesize]
 プログラムROMイメージの容量をバイト単位で記載します。
 値は最大値にしても構いませんが、読み込み時間がかかります。
+0x4000 未満を指定すると NES ヘッダをつけません。
 
 CPU_RAMSIZE [bytesize] 
-(注意) 現状アクセスできないので使用できません。予約命令です。
 バックアップRAMイメージの容量をバイト単位で記載します。指定しない場合
 はバックアップRAMなしとみなします。
 
@@ -85,6 +85,15 @@ length 有効範囲は 1-0x4000.
 CPU_WRITE [address] [ex0] [ex1] [ex2]
 CPUアドレスに ex012 を計算したデータを書き込みます。ex0 のみでも可。
 address 有効範囲は 0x5000-0xffff.
+
+CPU_RAMRW [address] [length]
+コマンドラインのモードによって異なります。
+ROM_DUMP:  使用不可
+RAM_DUMP:  CPUアドレスから指定の長さのデータを読み込みます。定数のみ。
+RAM_WRITE: target file を読み込み、指定アドレスへデータを書き込みます。
+           書き込み完了後、同じエリアを読み込み、確認結果を表示します。
+address 有効範囲は 0x6000-0x7fff.
+length 有効範囲は 1-0x2000.
 
 PPU_RAMTEST
 mmc1/3 のようにソフトによってキャラクタのメモリが RAM か ROM か異なる
