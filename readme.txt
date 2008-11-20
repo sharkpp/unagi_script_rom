@@ -8,6 +8,11 @@ ROM dump script version 0.20.1
 告をお願いします。
 
 ----
+diskbios.map
+----
+disksystem の bios 専用です。このスクリプトは、NESヘッダを生成しません。
+
+----
 mmc1_4M.map
 ----
 大容量ROM搭載のファイナルファンタジーI.IIとドラゴンクエストIV専用です。
