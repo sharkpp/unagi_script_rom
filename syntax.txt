@@ -1,4 +1,4 @@
-unagi script syntax 0.041
+unagi script syntax 0.5.0
 
 --スクリプト仕様--
 ==概要==
