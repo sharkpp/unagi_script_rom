@@ -1,4 +1,4 @@
-#VRCIV A0,A1 reversed + A1 invert + 2回シフト
+#VRCIV A0,A1 reversed + A1 invert + shiftx2
 #VRC - CPU
 #A0  = A3
 #A1  ^ A2
@@ -10,8 +10,8 @@ PPU_ROMSIZE 0x40000
 DUMP_START
 CPU_WRITE $9004 $00
 STEP_START i 0 0x1e 2
-	CPU_WRITE $8000 i + 0
-	CPU_WRITE $a000 i + 1
+	CPU_WRITE $8000 i
+	CPU_WRITE $a000 i | 1
 	CPU_READ $8000 0x4000
 STEP_END
 CPU_WRITE $9004 $02

@@ -1,4 +1,4 @@
-#VRCIV A0,A1 reversed + address bus 2回シフト
+#VRCIV A0,A1 reversed + shiftx2
 #VRC - CPU
 #A0  = A3
 #A1  = A2
@@ -10,8 +10,8 @@ DUMP_START
 #PROGRAM ROM 0x00000-0x3bfff
 CPU_WRITE $9008 $00
 STEP_START i 0 0x1e 2
-	CPU_WRITE $8000 i + 0
-	CPU_WRITE $a000 i + 1
+	CPU_WRITE $8000 i
+	CPU_WRITE $a000 i | 1
 	CPU_READ $8000 0x4000
 STEP_END
 #PROGRAM ROM 0x3c000-0x3ffff
@@ -23,21 +23,21 @@ CPU_READ $c000 0x4000
 STEP_START up 0 0x100 0x10
 	STEP_START v 0 0x10 8
 		CPU_WRITE $b004 up >> 4
-		CPU_WRITE $b000 v + 0
+		CPU_WRITE $b000 v | 0
 		CPU_WRITE $b00c up >> 4
-		CPU_WRITE $b008 v + 1
+		CPU_WRITE $b008 v | 1
 		CPU_WRITE $c004 up >> 4
-		CPU_WRITE $c000 v + 2
+		CPU_WRITE $c000 v | 2
 		CPU_WRITE $c00c up >> 4
-		CPU_WRITE $c008 v + 3
+		CPU_WRITE $c008 v | 3
 		CPU_WRITE $d004 up >> 4
-		CPU_WRITE $d000 v + 4
+		CPU_WRITE $d000 v | 4
 		CPU_WRITE $d00c up >> 4
-		CPU_WRITE $d008 v + 5
+		CPU_WRITE $d008 v | 5
 		CPU_WRITE $e004 up >> 4
-		CPU_WRITE $e000 v + 6
+		CPU_WRITE $e000 v | 6
 		CPU_WRITE $e00c up >> 4
-		CPU_WRITE $e008 v + 7
+		CPU_WRITE $e008 v | 7
 		PPU_READ 0 0x2000
 	STEP_END
 STEP_END

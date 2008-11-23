@@ -1,4 +1,4 @@
-#VRCIV A0,A1 reversed + A1 invert + Address BUS 1回シフト
+#VRCIV A0,A1 reversed + A1 invert + shiftx1
 #IV - CPU
 #A0 = A2
 #A1 ^ A1
