@@ -93,7 +93,7 @@ vrc4d.map:
 	Teenage Mutant Ninja Turtles 2
 vrc4e.map:
 	パロディウスだ！
-	悪魔城すぺしゃる ぼくドラキュラ君
+	悪魔城すぺしゃる ぼくドラキュラくん
 	クライシスフォース
 	タイニートゥーン・アドベンチャーズ (注:初代)
 vrc6a01.map:
