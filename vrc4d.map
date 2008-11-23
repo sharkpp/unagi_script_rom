@@ -1,4 +1,7 @@
-#VRCIV A0,A1 reversed + A1 invert + 2M + backup
+#VRCIV A0,A1 reversed + A1 invert
+#VRC - CPU
+#A0  = A1
+#A1  ^ A0
 #RC832, RC842
 #がんばれゴエモン外伝消えた黄金キセル
 MAPPER 25

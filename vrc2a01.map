@@ -1,4 +1,4 @@
-#VRCII A0,A1 reverse, databus 4bit
+#VRCII A0,A1 reverse
 #·îÉ÷ËâÅÁ
 MAPPER 23
 CPU_ROMSIZE 0x20000

@@ -1,4 +1,4 @@
-#VRCII A0,A1 reverse databus 7bit
+#VRCII A0,A1 reverse
 #VRC-CPU|databus 
 #A0 - A1|A0:0 xxxx210x
 #A1 - A0|A0:1 xxxx6543
