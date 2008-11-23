@@ -1,5 +1,5 @@
-famicom ROM cartridge dump program - unagi
-ROM dump script version 0.20.1
+famicom ROM cartridge utility - unagi
+ROM dump script version 0.26.0
 公式サイト http://sourceforge.jp/projects/unagi/
 
 --はじめに--
@@ -11,6 +11,7 @@ ROM dump script version 0.20.1
 diskbios.map
 ----
 disksystem の bios 専用です。このスクリプトは、NESヘッダを生成しません。
+client 0.5.0 + driver onajimi のみ動作確認。
 
 ----
 mmc1_4M.map
@@ -29,6 +30,8 @@ namcot106.map
 ----
 キングオブキングスのみ確認。このマッパを使用しているソフトは結構多く、
 キャラクタRAMを使用しているものがあるようですが、動作未確認です。
+namcot カートリッジのデータ読み出しがクライアント側の問題で安定しない
+ようです。
 
 ----
 rc809.map
@@ -54,35 +57,53 @@ vrc7.map
 ラグランジュポイントのみ動作確認済み。キャラクタROM搭載の Tiny Toon 
 Adventures 2 動作未確認。
 
---Konami title--
+--Konami VRC series--
 iNES の定義は結果としてかなりずさんで、マッパ番号はあてになりません。
-スクリプト名と一致するゲームタイトルを使用してください。
+ゲームタイトルと一致するスクリプトを使用してください。
+vrc シリーズを採用していないものは無関係です。
 
-vrc1.map
+vrc1.map:
 	がんばれゴエモン！からくり道中
 	キングコング2 怒りのメガトンパンチ
 	エキサイティングボクシング
 	鉄腕アトム
-vrc2a01.map
+vrc2a01.map:
 	コナミ ワイワイワールド
 	月風魔伝
-	ドラゴンスクロール 甦りし魔竜
-	魂斗羅 (初代)
+	ドラゴンスクロール 甦りし魔竜 (未確認)
+	魂斗羅 (注:初代)
 	じゃりん子チエ
 	がんばれゴエモン2
-vrc2a10.map
+vrc2a10.map:
 	がんばれペナントレース
 	ツインビー3 ポコポコ大魔王
-vrc3.map
+vrc3.map:
 	沙羅曼蛇
-vrc4a.map
+vrc4a.map:
 	ワイワイワールド2 SOS！！パセリ城
-vrc4b.map
-
-vrc4c.map
-vrc4d.map
-vrc4e.map
-vrc7.map
+vrc4b.map:
+	バイオミラクル ぼくってウパ (注:ROM)
+	がんばれゴエモン外伝 消えた黄金キセル
+	グラディウスII
+	レーサーミニ四駆 ジャパンカップ
+vrc4c.map:
+	がんばれゴエモン外伝2 天下の財宝
+vrc4d.map:
+	Teenage Mutant Ninja Turtles
+	Teenage Mutant Ninja Turtles 2
+vrc4e.map:
+	パロディウスだ！
+	悪魔城すぺしゃる ぼくドラキュラ君
+	クライシスフォース
+	タイニートゥーン・アドベンチャーズ (注:初代)
+vrc6a01.map:
+	悪魔城伝説 (未確認, 未作成)
+vrc6a10.map:
+	魍魎戦記 MADARA
+	エスパードリーム2
+vrc7.map:
+	ラグランジュポイント
+	タイニートゥーン・アドベンチャーズ2 (動作未確認で別スクリプトの可能性大)
 
 --スクリプト募集--
 150くらいあるマッパのスクリプトを全て私だけで書くことは出来ません。手
