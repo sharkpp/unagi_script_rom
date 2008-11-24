@@ -1,5 +1,5 @@
 famicom ROM cartridge utility - unagi
-ROM dump script version 0.26.0
+ROM dump script version 0.26.1
 公式サイト http://sourceforge.jp/projects/unagi/
 
 --はじめに--
@@ -11,7 +11,6 @@ ROM dump script version 0.26.0
 diskbios.map
 ----
 disksystem の bios 専用です。このスクリプトは、NESヘッダを生成しません。
-client 0.5.0 + driver onajimi のみ動作確認。
 
 ----
 mmc1_4M.map
@@ -26,8 +25,12 @@ mmc1normal.map
 ----
 namcot106.map
 ----
-バックアップRAMを持っているカセットはクライアント側の問題でデータ読み
-出しが安定しないようです。
+program ROM 4M のファミリーサーキット'91に対応しました。このゲーム内容
+で 4M なのはすごく疑問なんですが、別のプロテクトがかかってるのか、エ
+ミュレータ側で CRC 判断しているのが悪いかよくわかりません。
+client 0.5.1 で動作不安定対処をいれてあります。 maybe connection error 
+と出た場合は2,3度繰り返してみてください。それ以上駄目でしたら、本当に
+接触不良だと思われます。
 
 ----
 rc809.map
