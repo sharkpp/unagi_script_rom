@@ -11,7 +11,6 @@ STEP_START i 0 0x1e 2
 STEP_END
 CPU_WRITE $f000 0x1e
 CPU_READ $C000 0x4000
-PPU_RAMTEST
 
 #enable charcter bank switching
 CPU_WRITE $e800 %11000000

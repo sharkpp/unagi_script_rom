@@ -1,5 +1,5 @@
 #MMC1 PROGRAM 4M, CHARCTER RAM
-#Final Fantasy I.II, Dragon Quest IV(?)
+#Final Fantasy I.II, Dragon Quest IV
 MAPPER 1
 CPU_ROMSIZE 0x80000
 DUMP_START
