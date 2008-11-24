@@ -1,15 +1,15 @@
 #Namcot 106
-#king of kings
-CPU_ROMSIZE 0x40000
+#king of kings, family curcit'91
+CPU_ROMSIZE 0x80000
 PPU_ROMSIZE 0x40000
 MAPPER 19
 DUMP_START
-STEP_START i 0 0x1e 2
+STEP_START i 0 0x3e 2
 	CPU_WRITE $e000 i
 	CPU_WRITE $e800 i | 1
 	CPU_READ $8000 0x4000
 STEP_END
-CPU_WRITE $f000 0x1e
+CPU_WRITE $f000 0x3e
 CPU_READ $C000 0x4000
 
 #enable charcter bank switching
