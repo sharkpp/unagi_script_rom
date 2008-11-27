@@ -1,4 +1,5 @@
 #VRCII A0,A1 reverse
+#051744 jumper G?
 #VRC-CPU|databus 
 #A0 - A1|A0: xxxx210x
 #A1 - A0|A1: xxxx6543
