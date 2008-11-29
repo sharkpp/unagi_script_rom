@@ -90,9 +90,9 @@ vrc4e.map:
 	悪魔城すぺしゃる ぼくドラキュラくん
 	クライシスフォース
 	タイニートゥーン・アドベンチャーズ (注:初代)
-vrc6a01.map:
-	悪魔城伝説 (未確認, 未作成)
-vrc6a10.map:
+vrc6.map:
+	悪魔城伝説
+vrc6.map: (コマンドライン unagi.exe d vrc6.map xx.nes S 26)
 	魍魎戦記 MADARA
 	エスパードリーム2
 vrc7.map:
