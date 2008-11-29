@@ -1,10 +1,9 @@
 #VRCVI A0,A1 reversed
 #RC846, RC861
+#$a003 は 0 が書かれるが用途不明
 MAPPER 26
 CPU_ROMSIZE 0x40000
 PPU_ROMSIZE 0x40000
-#$9002 bit2:0  $a000 switch $8000-$9fff
-#$9002 bit2:1  $a000 switch $c000-$dfff
 DUMP_START
 #PROGRAM ROM 0x00000-0x3bfff
 STEP_START i 0 0x0f 1
@@ -12,23 +11,22 @@ STEP_START i 0 0x0f 1
 	CPU_READ $8000 0x4000
 STEP_END
 #PROGRAM ROM 0x3c000-0x3ffff
-#$c000 のスイッチの仕方がよくわからんかったので $8000 にしとく
-CPU_WRITE $8000 $0f
-CPU_READ $8000 0x2000
+CPU_WRITE $c000 $1e
+CPU_READ $c000 0x2000
 CPU_READ $e000 0x2000
 
 #CHRROM 0x00000-0x3ffff
-STEP_START v 0 0x100 4
+#bit6: たぶん $1000-以降の切り替えを $0000-と同じにしない
+CPU_WRITE $b003 $20
+STEP_START v 0 0x100 8
 	CPU_WRITE $d000 v | 0
 	CPU_WRITE $d001 v | 2
 	CPU_WRITE $d002 v | 1
 	CPU_WRITE $d003 v | 3
-#$e000 もうまくきりかわらない..., $d000 と同じ内容になることが多い...
-#	CPU_WRITE $e000 v + 4
-#	CPU_WRITE $e002 v + 5
-#	CPU_WRITE $e001 v + 6
-#	CPU_WRITE $e003 v + 7
-#	PPU_READ 0 0x2000
-	PPU_READ 0 0x1000
+	CPU_WRITE $e000 v | 4
+	CPU_WRITE $e001 v | 6
+	CPU_WRITE $e002 v | 5
+	CPU_WRITE $e003 v | 7
+	PPU_READ 0 0x2000
 STEP_END
 DUMP_END
