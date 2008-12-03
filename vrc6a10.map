@@ -1,4 +1,4 @@
-#VRCVI A0,A1 reversed
+#VRCVI A0,A1 swap
 #RC846, RC861
 #$a003 は 0 が書かれるが用途不明
 MAPPER 26

@@ -1,4 +1,4 @@
-#VRCIV A0,A1 reversed + A1 invert + shiftx6
+#VRCIV A0,A1 swap + A1 invert + shiftx6
 #IV - CPU
 #A0 = A7
 #A1 ^ A6
