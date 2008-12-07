@@ -1,10 +1,77 @@
 famicom ROM cartridge utility - unagi
-ROM dump script version 0.26.2
+ROM dump script version 0.35.0
 公式サイト http://sourceforge.jp/projects/unagi/
 
---はじめに--
-筆者に手元にあったカセットを読み出すために使用しました。補足説明が必要
-な物の説明です。動作未確認と記載したもので動作確認がとれたものは是非報
+--スクリプトファイルと nes mapper 番号一覧--
+==Nintendo 製とその互換品==
+script        #
+------------------
+nrom.ud       0
+unrom.ud      2
+gnrom.ud      66
+mmc1normal.ud 1
+mmc1_4M.ud    1
+mmc2.ud       9
+mmc3.ud       4,118,etc..
+mmc4.ud       10
+mmc5.ud       5
+
+==Konami 製とその互換品==
+注意: VRC2,4 はマッパ番号があまり役に立ちません。
+script        #
+------------------
+rc809.ud      87
+vrc1.ud       75
+vrc2a01.ud    23
+vrc2a10.ud    22
+vrc3.ud       73
+vrc4a.ud      21
+vrc4b.ud      25
+vrc4c.ud      21
+vrc4d.ud      25
+vrc4e.ud      23
+vrc6.ud       24,26
+vrc7.ud       85
+
+==Sunsoft 製==
+script        #
+------------------
+sunsoftm.ud   89
+sunsoft3.ud   67
+sunsoft5.ud   69
+
+==Taito 製==
+script        #
+------------------
+x1_005.ud     80
+x1_17.ud      82
+tc0190.ud     33
+
+==Irem 製==
+script        #
+------------------
+irem_g101.ud  32
+irem_h3001.ud 65
+
+==Namcot 製==
+script        #
+------------------
+namcot118.ud  88
+namcot106.ud  16
+
+==Bandai 製==
+script        #
+------------------
+bandai_70.ud  70
+
+==Jaleco 製==
+script        #
+------------------
+jaleco_72.ud  72
+jaleco_92.ud  92
+
+--補足説明--
+補足説明にて必要動作未確認と記載したもので動作確認がとれたものは是非報
 告をお願いします。
 
 特定のソフトは個別にコマンドラインオプションをつける必要があります。
@@ -12,91 +79,75 @@ ROM dump script version 0.26.2
  unagi.exe d [スクリプトファイル] [出力ファイル] [flag] [mapper]
 mapper の部分はなくてもよい場合が多いです。
 
---------
-diskbios.map
+==diskbios.ud==
 disksystem の bios 専用です。このスクリプトは、NESヘッダを生成しません。
 
---------
-mmc1_4M.map
+==mmc1_4M.ud==
 大容量ROM搭載のファイナルファンタジーI.IIとドラゴンクエストIV専用です。
 
---------
-mmc1normal.map
+==mmc1normal.ud==
 上記以外の MMC1 搭載ソフトに使用してください。
 
---------
-mmc3.map #3, バリアント
+==mmc3.ud==
 flag:S mapper:118
 	ワンダラーズフロムイース
 	RPG 人生ゲーム
 flag:_ mapper:118
 	アルマジロ
 
---------
-namcot106.map #19
+==namcot106.ud==
 flag:SV
 	ファミリーサーキット'91
 
---------
-rc809.map #87
-グーニーズ初代, ハイパーオリンピック殿様版, ジャレコ初期ソフト用。
-グーニーズはバリエーションが異様に豊富なのでお間違えなきよう。
-
---------
-sunsoft3.map #67
+==sunsoft3.ud==
 コメントにも書いたんですが、スクリプトを書き終わった後にこのマッパのカ
 セットを持ってないことに気づきました。動作未確認です。
-
---------
-vrc7.map
-ラグランジュポイントのみ動作確認済み。キャラクタROM搭載の Tiny Toon 
-Adventures 2 動作未確認。
 
 --Konami VRC series--
 iNES の定義は結果としてかなりずさんで、マッパ番号はあてになりません。
 ゲームタイトルと一致するスクリプトを使用してください。
 vrc シリーズを採用していないものは無関係です。
 
-vrc1.map:
+vrc1.ud:
 	がんばれゴエモン！からくり道中
 	キングコング2 怒りのメガトンパンチ
 	エキサイティングボクシング
 	鉄腕アトム
-vrc2a01.map:
+vrc2a01.ud:
 	コナミ ワイワイワールド
 	月風魔伝
 	ドラゴンスクロール 甦りし魔竜 (未確認)
 	魂斗羅 (注:初代)
 	じゃりん子チエ
 	がんばれゴエモン2
-vrc2a10.map:
+vrc2a10.ud:
 	がんばれペナントレース
 	ツインビー3 ポコポコ大魔王
-vrc3.map:
+vrc3.ud:
 	沙羅曼蛇
-vrc4a.map:
+vrc4a.ud:
 	ワイワイワールド2 SOS!!パセリ城
-vrc4b.map:
+vrc4b.ud:
 	バイオミラクル ぼくってウパ (注:ROM)
 	がんばれゴエモン外伝 消えた黄金キセル
 	グラディウスII
 	レーサーミニ四駆 ジャパンカップ
-vrc4c.map:
+vrc4c.ud:
 	がんばれゴエモン外伝2 天下の財宝
-vrc4d.map:
+vrc4d.ud:
 	Teenage Mutant Ninja Turtles
 	Teenage Mutant Ninja Turtles 2
-vrc4e.map:
+vrc4e.ud:
 	パロディウスだ！
 	悪魔城すぺしゃる ぼくドラキュラくん
 	クライシスフォース
 	タイニートゥーン・アドベンチャーズ (注:初代)
-vrc6.map:
+vrc6.ud:
 	悪魔城伝説
-vrc6.map: flag:S mapper:26
+vrc6.ud: flag:S mapper:26
 	魍魎戦記 MADARA
 	エスパードリーム2
-vrc7.map:
+vrc7.ud:
 	ラグランジュポイント
 	タイニートゥーン・アドベンチャーズ2 (動作未確認で別スクリプトの可能性大)
 
@@ -107,7 +158,7 @@ vrc7.map:
 採用基準は下記とさせていただきます。
 
 * そのスクリプトを使って実際に動作確認をして読み出せたこと(とかいって
-  おきながら sunsoft3.map は動作未確認...)
+  おきながら sunsoft3.ud は動作未確認...)
 * 動作確認をしたソフト数本の名称か型番をスクリプト先頭にコメントをいれ
   ること
 * 読み出しに必要なレジスタは初期化してから読み出すこと (マッパのマイ
