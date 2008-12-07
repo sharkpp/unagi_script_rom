@@ -2,10 +2,10 @@ famicom ROM cartridge utility - unagi
 ROM dump script version 0.35.0
 公式サイト http://sourceforge.jp/projects/unagi/
 
---スクリプトファイルと nes mapper 番号一覧--
+--スクリプトファイルと nes header マッパ番号一覧--
 ==Nintendo 製とその互換品==
 script        #
-------------------
+----------------
 nrom.ud       0
 unrom.ud      2
 gnrom.ud      66
@@ -19,7 +19,7 @@ mmc5.ud       5
 ==Konami 製とその互換品==
 注意: VRC2,4 はマッパ番号があまり役に立ちません。
 script        #
-------------------
+----------------
 rc809.ud      87
 vrc1.ud       75
 vrc2a01.ud    23
@@ -33,42 +33,18 @@ vrc4e.ud      23
 vrc6.ud       24,26
 vrc7.ud       85
 
-==Sunsoft 製==
-script        #
-------------------
-sunsoftm.ud   89
-sunsoft3.ud   67
-sunsoft5.ud   69
+==Sunsoft 製==   ==Taito 製==     ==Irem 製==
+script        #  script        #  script        #
+---------------- ---------------- ----------------
+sunsoftm.ud   89 x1_005.ud     80 irem_g101.ud  32
+sunsoft3.ud   67 x1_17.ud      82 irem_h3001.ud 65
+sunsoft5.ud   69 tc0190.ud     33
 
-==Taito 製==
-script        #
-------------------
-x1_005.ud     80
-x1_17.ud      82
-tc0190.ud     33
-
-==Irem 製==
-script        #
-------------------
-irem_g101.ud  32
-irem_h3001.ud 65
-
-==Namcot 製==
-script        #
-------------------
-namcot118.ud  88
-namcot106.ud  16
-
-==Bandai 製==
-script        #
-------------------
-bandai_70.ud  70
-
-==Jaleco 製==
-script        #
-------------------
-jaleco_72.ud  72
-jaleco_92.ud  92
+==Namcot 製==    ==Bandai 製==    ==Jaleco 製==
+script        #  script        #  script        #
+---------------- ---------------- ----------------
+namcot118.ud  88 bandai_70.ud  70 jaleco_72.ud  72
+namcot106.ud  16 bandai_70.ud  70 jaleco_92.ud  92
 
 --補足説明--
 補足説明にて必要動作未確認と記載したもので動作確認がとれたものは是非報
