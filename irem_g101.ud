@@ -1,0 +1,27 @@
+MAPPER 32
+CPU_ROMSIZE 0x40000
+PPU_ROMSIZE 0x20000
+
+DUMP_START
+#$8000-$9fff bankarea
+#$c000-$dfff fixarea
+CPU_WRITE $9fff 0
+STEP_START i 0 0x1e 2
+	CPU_WRITE $8fff i
+	CPU_WRITE $afff i | 1
+	CPU_READ $8000 0x4000
+STEP_END
+CPU_READ $c000 0x4000
+
+STEP_START i 0 0x80 8
+	CPU_WRITE $bff0 i
+	CPU_WRITE $bff1 i | 1
+	CPU_WRITE $bff2 i | 2
+	CPU_WRITE $bff3 i | 3
+	CPU_WRITE $bff4 i | 4
+	CPU_WRITE $bff5 i | 5
+	CPU_WRITE $bff6 i | 6
+	CPU_WRITE $bff7 i | 7
+	PPU_READ 0 0x2000
+STEP_END
+DUMP_END
