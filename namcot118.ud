@@ -1,0 +1,48 @@
+#クインティ, ドラゴンスピリット 新たなる伝説
+MAPPER 88
+CPU_ROMSIZE 0x20000
+PPU_ROMSIZE 0x20000
+DUMP_START
+#8000h  Index/Control (3bit)
+# Bit2-0 Command Number
+#   0 - Select 2x1K VROM at PPU 0000h-07FFh (Banks 0-63)
+#   1 - Select 2x1K VROM at PPU 0800h-0FFFh (Banks 0-63)
+#   2 - Select 1K VROM at PPU 1000h-13FFh   (Banks 64-127)
+#   3 - Select 1K VROM at PPU 1400h-17FFh   (Banks 64-127)
+#   4 - Select 1K VROM at PPU 1800h-1BFFh   (Banks 64-127)
+#   5 - Select 1K VROM at PPU 1C00h-1FFFh   (Banks 64-127)
+#   6 - Select 8K ROM at 8000h-9FFFh
+#   7 - Select 8K ROM at A000h-BFFFh
+# N/A - Fixed 16K ROM at C000h-FFFFh (always last bank)
+#8001h  Data Register (Indexed via Port 8000h)
+
+STEP_START i 0 0xe 2
+	CPU_WRITE $8000 6
+	CPU_WRITE $8001 i
+	CPU_WRITE $8000 7
+	CPU_WRITE $8001 i | 1
+	CPU_READ $8000 0x4000
+STEP_END
+CPU_READ $c000 0x4000
+
+#PPU page 0-
+STEP_START i 0 0x40 4
+	CPU_WRITE $8000 0
+	CPU_WRITE $8001 i
+	CPU_WRITE $8000 1
+	CPU_WRITE $8001 i | 2
+	PPU_READ 0 0x1000
+STEP_END
+#PPU page 0x40-
+STEP_START i 0x00 0x40 4
+	CPU_WRITE $8000 2
+	CPU_WRITE $8001 i
+	CPU_WRITE $8000 3
+	CPU_WRITE $8001 i | 1
+	CPU_WRITE $8000 4
+	CPU_WRITE $8001 i | 2
+	CPU_WRITE $8000 5
+	CPU_WRITE $8001 i | 3
+	PPU_READ $1000 0x1000
+STEP_END
+DUMP_END

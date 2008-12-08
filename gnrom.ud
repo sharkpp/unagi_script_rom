@@ -1,4 +1,5 @@
 #GNROM と互換品
+#HFC-DO
 #このマッパにかかわらず jaleco 系が動作不安定
 MAPPER 66
 CPU_ROMSIZE 0x20000
