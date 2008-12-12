@@ -44,7 +44,10 @@ sunsoft5.ud   69 tc0190.ud     33
 script        #  script        #  script        #
 ---------------- ---------------- ----------------
 namcot118.ud  88 bandai_70.ud  70 jaleco_72.ud  72
-namcot106.ud  16 bandai_70.ud  70 jaleco_92.ud  92
+namcot106.ud  16 fcg1.ud       16 jaleco_92.ud  92
+                 fcg2.ud       16
+                 lz93d50.ud    16
+                 fcjump2.ud    16?
 
 --補足説明--
 補足説明にて必要動作未確認と記載したもので動作確認がとれたものは是非報
