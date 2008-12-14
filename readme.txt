@@ -8,6 +8,7 @@ script        #
 ----------------
 nrom.ud       0
 unrom.ud      2
+uorom.ud      2
 gnrom.ud      66
 mmc1normal.ud 1
 mmc1_4M.ud    1
@@ -44,8 +45,7 @@ sunsoft5.ud   69 tc0190.ud     33
 script        #  script        #  script        #
 ---------------- ---------------- ----------------
 namcot118.ud  88 bandai_70.ud  70 jaleco_72.ud  72
-namcot106.ud  16 fcg1.ud       16 jaleco_92.ud  92
-                 fcg2.ud       16
+namcot106.ud  19 fcg1.ud       16 jaleco_92.ud  92
                  lz93d50.ud    16
                  fcjump2.ud    16?
 
@@ -83,9 +83,8 @@ flag:SV
 セットを持ってないことに気づきました。動作未確認です。
 
 --Konami VRC series--
-iNES の定義は結果としてかなりずさんで、マッパ番号はあてになりません。
-ゲームタイトルと一致するスクリプトを使用してください。
-vrc シリーズを採用していないものは無関係です。
+マッパ番号はあてになりません。ゲームタイトルと一致するスクリプトを使用
+してください。vrc シリーズを採用していないものは無関係です。
 
 vrc1.ud:
 	がんばれゴエモン！からくり道中
