@@ -7,7 +7,7 @@
 #VRCII A0,A1 swap + IRQ 以外は VRCIV と互換性があるらしい...
 #VRC-CPU|databus 
 #A0 = A1|A0: xxxx3210
-#A1 = A0|A1: xxxx6543
+#A1 = A0|A1: xxxx7654
 #VRC-CHRCTER ROM
 #A13-A17 = A13-A17
 MAPPER 25
