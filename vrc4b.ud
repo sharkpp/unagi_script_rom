@@ -1,14 +1,21 @@
+#RC832, RC842
 #VRCIV A0,A1 swap + A1 invert
 #VRC - CPU
 #A0  = A1
 #A1  ^ A0
-#RC832, RC842
-#がんばれゴエモン外伝消えた黄金キセル
+#RC840 がんばれゴエモン外伝消えた黄金キセル
+#VRCII A0,A1 swap + IRQ 以外は VRCIV と互換性があるらしい...
+#VRC-CPU|databus 
+#A0 = A1|A0: xxxx3210
+#A1 = A0|A1: xxxx6543
+#VRC-CHRCTER ROM
+#A13-A17 = A13-A17
 MAPPER 25
 CPU_ROMSIZE 0x40000
 PPU_ROMSIZE 0x40000
 #$9001 bit2:0  $a000 switch $8000-$9fff
 #$9001 bit2:1  $a000 switch $c000-$dfff
+#VRC2 では無効
 DUMP_START
 #PROGRAM ROM 0x00000-0x3bfff
 CPU_WRITE $9001 $00
@@ -18,6 +25,7 @@ STEP_START i 0 0x1e 2
 	CPU_READ $8000 0x4000
 STEP_END
 #PROGRAM ROM 0x3c000-0x3ffff
+#VRC2 では無効
 CPU_WRITE $9001 $02
 CPU_WRITE $8000 $1e
 CPU_READ $c000 0x4000

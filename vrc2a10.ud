@@ -1,8 +1,10 @@
-#VRCII A0,A1 swap
+#VRCII A0,A1 swap + charcter ROM address bus shiftx1
 #051744 jumper G?
 #VRC-CPU|databus 
 #A0 - A1|A0: xxxx210x
 #A1 - A0|A1: xxxx6543
+#VRC-CHRCTER ROM
+#A14-A17 = A13-A16
 #RC834 がんペナ
 MAPPER 22
 CPU_ROMSIZE 0x20000
