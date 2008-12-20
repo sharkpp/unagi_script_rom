@@ -23,8 +23,6 @@ CPU_READ $C000 0x4000
 #CHARCTER ROM/RAM bankswitch
 CPU_WRITE $a000 0
 PPU_RAMFIND
-#Tiny Toon Adventures 2 動作未確認
-#$x010 は $x008 の可能性あり
 STEP_START i 0 0x80 8
 	CPU_WRITE $a000 i
 	CPU_WRITE $a018 i | 1

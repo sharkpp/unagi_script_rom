@@ -1,6 +1,6 @@
 famicom ROM cartridge utility - unagi
 ROM dump script version 0.35.0
-公式サイト http://sourceforge.jp/projects/unagi/
+公式サイト http://unagi.sourceforge.jp/
 
 --スクリプトファイルと nes header マッパ番号一覧--
 ==Nintendo 製とその互換品==
@@ -37,15 +37,15 @@ vrc7.ud       85
 ==Sunsoft 製==   ==Taito 製==     ==Irem 製==
 script        #  script        #  script        #
 ---------------- ---------------- ----------------
-sunsoftm.ud   89 x1_005.ud     80 irem_g101.ud  32
-sunsoft3.ud   67 x1_17.ud      82 irem_h3001.ud 65
-sunsoft5.ud   69 tc0190.ud     33
+sunsoft2b.ud  89 x1_005.ud     80 irem_g101.ud  32
+sunsoft3.ud   67 x1_017.ud     82 irem_h3001.ud 65
+sunsoft5b.ud  69 tc0190.ud     33
 
 ==Namcot 製==    ==Bandai 製==    ==Jaleco 製==
 script        #  script        #  script        #
 ---------------- ---------------- ----------------
 namcot118.ud  88 bandai_70.ud  70 jaleco_72.ud  72
-namcot106.ud  19 fcg1.ud       16 jaleco_92.ud  92
+namcot163.ud  19 fcg1.ud       16 jaleco_92.ud  92
                  lz93d50.ud    16
                  fcjump2.ud    16?
 
@@ -127,7 +127,7 @@ vrc6.ud: flag:S mapper:26
 	エスパードリーム2
 vrc7.ud:
 	ラグランジュポイント
-	タイニートゥーン・アドベンチャーズ2 (動作未確認で別スクリプトの可能性大)
+	タイニートゥーン・アドベンチャーズ2
 
 --スクリプト募集--
 150くらいあるマッパのスクリプトを全て私だけで書くことは出来ません。手
