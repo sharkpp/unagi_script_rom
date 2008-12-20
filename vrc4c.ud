@@ -1,7 +1,7 @@
-#VRCIV A0,A1 swap + A1 invert + shiftx6
+#VRCIV A0 invert + shiftx6
 #IV - CPU
-#A0 = A7
-#A1 ^ A6
+#A0 ^ A6
+#A1 = A7
 #mapper 21 は VRC4A とかぶるがレジスタアドレスが異なる(別のマッパにしないの??)
 #RC857 がんばれゴエモン外伝2 天下の財宝
 MAPPER 21
