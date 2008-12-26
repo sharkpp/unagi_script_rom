@@ -2,11 +2,12 @@
 #RC821
 #各レジスタは4bit
 #write
-#$8000,$9000 不明
-#$a000 IRQ scanlineもどき count, bit0-3
-#$b000 IRQ scanlineもどき count, bit4-7
+#$8000 IRQ cpu clock count, bit0-3??
+#$9000 IRQ cpu clock count, bit4-7??
+#$a000 IRQ cpu clock count, bit8-11
+#$b000 IRQ cpu clock count, bit12-15
 #$c000 IRQ enable
-#$d000 IRQ Acknowledge?
+#$d000 IRQ Acknowledge
 #$f000 bit0-2 pagenumber at CPU address $8000-$bfff
 #      bit3 1: ROM address 0x1c000-0x1cfff map CPU address $c000-$cfff
 #           0: IRQ status? at CPU address $c000-$cfff
