@@ -1,8 +1,8 @@
 #RC832, RC842
-#VRCIV A0,A1 swap + A1 invert
-#VRC - CPU
-#A0  = A1
-#A1  ^ A0
+#VRCIV A0,A1 swap
+#VRC- CPU
+#A0 = A1
+#A1 = A0
 #RC840 がんばれゴエモン外伝消えた黄金キセル
 #VRCII A0,A1 swap + IRQ 以外は VRCIV と互換性があるらしい...
 #VRC-CPU|databus 

@@ -1,7 +1,7 @@
-#VRCIV A0,A1 swap + A1 invert + shiftx1
+#VRCIV A0,A1 swap + shiftx1
 #VRC- CPU
 #A0 = A2
-#A1 ^ A1
+#A1 = A1
 #RC850
 MAPPER 21
 CPU_ROMSIZE 0x40000
