@@ -1,5 +1,5 @@
 famicom ROM cartridge utility - unagi
-ROM dump script version 0.35.0
+ROM dump script version 0.36.0
 公式サイト http://unagi.sourceforge.jp/
 
 --スクリプトファイルと nes header マッパ番号一覧--
@@ -7,6 +7,7 @@ ROM dump script version 0.35.0
 script        #
 ----------------
 nrom.ud       0
+cnrom.ud      3
 unrom.ud      2
 uorom.ud      2
 gnrom.ud      66
@@ -38,16 +39,15 @@ vrc7.ud       85
 script        #  script        #  script        #
 ---------------- ---------------- ----------------
 sunsoft2b.ud  89 x1_005.ud     80 irem_g101.ud  32
-sunsoft3.ud   67 x1_017.ud     82 irem_h3001.ud 65
+sunsoft3.ud   67 x1_017.ud     82
 sunsoft5b.ud  69 tc0190.ud     33
 
-==Namcot 製==    ==Bandai 製==    ==Jaleco 製==
-script        #  script        #  script        #
----------------- ---------------- ----------------
-namcot118.ud  88 bandai_70.ud  70 jaleco_72.ud  72
-namcot163.ud  19 fcg1.ud       16 jaleco_92.ud  92
+==Namcot 製==    ==Bandai 製==   
+script        #  script        # 
+---------------- ----------------
+namcot118.ud  88 bandai_70.ud  70
+namcot163.ud  19 fcg1.ud       16
                  lz93d50.ud    16
-                 fcjump2.ud    16?
 
 --補足説明--
 補足説明にて必要動作未確認と記載したもので動作確認がとれたものは是非報
@@ -60,6 +60,15 @@ mapper の部分はなくてもよい場合が多いです。
 
 ==diskbios.ud==
 disksystem の bios 専用です。このスクリプトは、NESヘッダを生成しません。
+
+==unrom.ud, uorom.ud==
+mapper:2 のうち下記のソフトは uorom.ud を使用してください。
+	エスパ冒険隊
+	マニアックマンション
+	松本亨の株式必勝学
+	桃太郎電鉄 (初代)
+	星霊狩り
+全て uorom.ud でもいいんですが、読みだし時間が2倍かかります。
 
 ==mmc1_4M.ud==
 大容量ROM搭載のファイナルファンタジーI.IIとドラゴンクエストIV専用です。
@@ -74,9 +83,15 @@ flag:S mapper:118
 flag:_ mapper:118
 	アルマジロ
 
-==namcot106.ud==
+==namcot163.ud==
+ワギャンランド2,3 以外はミラーリングを設定する必要があるようです。
 flag:SV
 	ファミリーサーキット'91
+
+==fcg1.ud, lz93d50.ud==
+mapper 16 同士ですが、ソフトによってどちらか1つが使えます。詳細な調査
+はしていませんが、バックアップRAMが載っていたり、1990年以降のソフトは 
+lz93d50.ud を使用した方がよいようです。
 
 ==sunsoft3.ud==
 コメントにも書いたんですが、スクリプトを書き終わった後にこのマッパのカ
