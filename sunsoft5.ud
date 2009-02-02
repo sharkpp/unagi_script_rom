@@ -1,4 +1,7 @@
-#Sunsoft5 FME7
+#Sunsoft5 series
+#Sunsoft 5A: Program ROM size max 2M
+#Sunsoft 5B: 5A + Extra sound
+#FME-7: 5A + Program ROM size max 4M??
 #barcode world
 CPU_ROMSIZE 0x40000
 PPU_ROMSIZE 0x40000
@@ -8,7 +11,7 @@ DUMP_START
 #$8000 register address set
 #$a000 register data set
 #$00-$07 PPUBANK
-#$08 特定ソフトのみ CPUBANK, $6000-$7fff ROM
+#$08 CPUBANK, $6000-$7fff ROM
 #$09-$0B CPUBANK
 #$0c mirror
 #$0d-$0f IRQ

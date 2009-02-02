@@ -40,7 +40,7 @@ script        #  script        #  script        #
 ---------------- ---------------- ----------------
 sunsoft2b.ud  89 x1_005.ud     80 irem_g101.ud  32
 sunsoft3.ud   67 x1_017.ud     82
-sunsoft5b.ud  69 tc0190.ud     33
+sunsoft5.ud   69 tc0190.ud     33
 
 ==Namcot 製==    ==Bandai 製==   
 script        #  script        # 
@@ -91,7 +91,7 @@ flag:SV
 ==fcg1.ud, lz93d50.ud==
 mapper 16 同士ですが、ソフトによってどちらか1つが使えます。詳細な調査
 はしていませんが、バックアップRAMが載っていたり、1990年以降のソフトは 
-lz93d50.ud を使用した方がよいようです。
+lz93d50.ud を使用したほうがよいようです。
 
 ==sunsoft3.ud==
 コメントにも書いたんですが、スクリプトを書き終わった後にこのマッパのカ
